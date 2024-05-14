@@ -12,12 +12,11 @@ function getHumanChoice(list) {
     let humanChoice = prompt("Rock, paper or scissors?");
     
     while (!list.includes(humanChoice.toLowerCase())) {
-        console.log('Error, option not in list0')
-        humanChoice = prompt(`Rock, paper or scissors?`);
-        
-    return humanChoice;
+        console.log('Error, option not in list')
+        return getHumanChoice(list);
+    }    
+    return humanChoice.toLowerCase();
     }
-}
 
 
 function playRound() {
